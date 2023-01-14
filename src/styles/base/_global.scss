@@ -1,0 +1,17 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $fontFamily;
+  color: $textColor;
+  background-color: $backgroundColor;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: $primaryColor;
+}
