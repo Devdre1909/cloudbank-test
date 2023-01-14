@@ -1,0 +1,18 @@
+.dashboard-header {
+
+  margin-bottom: 30px;
+
+  &__title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  &__text {
+    font-size: 16px;
+
+    &--highlight {
+      color: $primaryColor;
+      font-weight: 500;
+    }
+  }
+}
