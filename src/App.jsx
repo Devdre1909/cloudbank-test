@@ -1,7 +1,7 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 
 import Dashboard from "./layout/dashboard";
-import DashboardHome from "./pages/dashboard/home";
+import DashboardHome from "./pages/dashboard/loan";
 
 function App() {
   return (
