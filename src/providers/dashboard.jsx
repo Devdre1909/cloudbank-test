@@ -8,7 +8,9 @@ const DashboardContext = createContext({
 export const DashboardProvider = ({ children }) => {
   const [pageTitle, setPageTitle] = useState("");
 
-  const value = { pageTitle, setPageTitle };
+  const updatePageTitle = (name) => setPageTitle(name);
+
+  const value = { pageTitle, setPageTitle: updatePageTitle };
 
   return (
     <DashboardContext.Provider value={value}>

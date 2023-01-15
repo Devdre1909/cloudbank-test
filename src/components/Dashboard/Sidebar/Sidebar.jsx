@@ -11,9 +11,12 @@ import TransactionLogo from "../../../assets/icons/transaction.svg";
 import MarketplaceLogo from "../../../assets/icons/marketplace.svg";
 import SettingsLogo from "../../../assets/icons/settings.svg";
 import LogoutLogo from "../../../assets/icons/turn-off.svg";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Sidebar = () => {
+  const location = useLocation();
+  const isActiveRoute = (path) => location.pathname === path;
+
   return (
     <div className="sidebar__wrapper">
       <div className="sidebar__content">
@@ -22,7 +25,12 @@ const Sidebar = () => {
         </div>
         <div className="sidebar__nav">
           <ul className="sidebar__links">
-            <Link to="/dashboard/home" className="sidebar__link">
+            <Link
+              to="/dashboard/home"
+              className={`sidebar__link ${
+                isActiveRoute("/dashboard/home") && "sidebar__link--active"
+              }`}
+            >
               <img src={DashboardLogo} alt="Dashboard" />
               <span>Home</span>
             </Link>
@@ -38,7 +46,12 @@ const Sidebar = () => {
               <img src={InvestmentLogo} alt="Investment" />
               <span>Investment</span>
             </li>
-            <Link to="/dashboard/loan" className="sidebar__link sidebar__link--active">
+            <Link
+              to="/dashboard/loan"
+              className={`sidebar__link ${
+                isActiveRoute("/dashboard/loan") && "sidebar__link--active"
+              }`}
+            >
               <img src={LoanLogo} alt="Loan" />
               <span>Loan</span>
             </Link>

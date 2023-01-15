@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import useDashboard from "../../providers/dashboard";
 
 const HomeDashboard = () => {
   const { setPageTitle } = useDashboard();
-  setPageTitle("Home");
+  useEffect(() => {
+    setPageTitle("Home");
+  }, []);
 
   return <div>HomeDashboard</div>;
 };

@@ -67,7 +67,9 @@ const Dashboard = () => {
         <div className="dashboard-container__main">
           <div className="dashboard-container__main-content">
             <DashboardHeader />
-            <Outlet />
+            <div>
+              <Outlet />
+            </div>
           </div>
         </div>
       </div>

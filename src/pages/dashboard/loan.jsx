@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Card from "../../components/Card/card";
 
 import OneMonthImage from "../../assets/dashboard/one-month.png";
@@ -13,7 +13,9 @@ import useDashboard from "../../providers/dashboard";
 
 const LoanDashboard = () => {
   const { setPageTitle } = useDashboard();
-  setPageTitle("Loan");
+  useEffect(()=>{
+    setPageTitle("Loans")
+  }, [])
 
   return (
     <div className="dashboard-home">
