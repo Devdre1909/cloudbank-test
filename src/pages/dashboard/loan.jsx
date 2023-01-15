@@ -9,8 +9,12 @@ import InfrastructureLoanImage from "../../assets/dashboard/infrastructure.png";
 import PersonalLoanImage from "../../assets/dashboard/personal.png";
 import PawnLoanImage from "../../assets/dashboard/pawn.png";
 import FXLineImage from "../../assets/dashboard/fx.png";
+import useDashboard from "../../providers/dashboard";
 
-const DashboardHome = () => {
+const LoanDashboard = () => {
+  const { setPageTitle } = useDashboard();
+  setPageTitle("Loan");
+
   return (
     <div className="dashboard-home">
       <div className="dashboard-home__container">
@@ -59,4 +63,4 @@ const DashboardHome = () => {
   );
 };
 
-export default DashboardHome;
+export default LoanDashboard;
