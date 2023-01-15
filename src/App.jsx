@@ -7,9 +7,9 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Navigate to="/dashboard/home" />} />
+        <Route path="/" element={<Navigate to="/dashboard/loan" />} />
         <Route path="/dashboard" exact element={<Dashboard />}>
-          <Route index path="home" exact element={<DashboardHome />} />
+          <Route index path="loan" exact element={<DashboardHome />} />
         </Route>
         <Route path="*" element={<Navigate to="/dashboard/home" />} />
       </Routes>
