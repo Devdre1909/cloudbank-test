@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Card from "../../components/Card/card";
+import Card from "../../components/Card/Card";
 
 import OneMonthImage from "../../assets/dashboard/one-month.png";
 import WorkingCaptImage from "../../assets/dashboard/working-capt.png";
